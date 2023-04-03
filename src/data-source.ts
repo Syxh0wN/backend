@@ -2,7 +2,7 @@ import { DataSource } from "typeorm";
 import "dotenv/config";
 import { Users } from "./entities/user";
 import { Contact } from "./entities/contact";
-import { hash1680543119227 } from "../migrations/1680543119227-hash";
+import { defalt1680549523118 } from "../migrations/1680549523118-defalt";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -13,5 +13,5 @@ export const AppDataSource = new DataSource({
   database: process.env.DB_NAME,
 
   entities: [Users, Contact],
-  migrations: [hash1680543119227],
+  migrations: [defalt1680549523118],
 });

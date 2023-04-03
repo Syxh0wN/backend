@@ -1,6 +1,9 @@
 import { Router } from "express";
 import { validateSchemaMiddleware } from "../../middlewares/validated";
-import { userRegisterValidation, userValidationPatch } from "../../schemas";
+import {
+  userRegisterValidation,
+  userValidationPatch,
+} from "../../schemas/user";
 import { createUserController } from "../../controllers/user/create";
 import { authValidationMiddleware } from "../../middlewares/auth";
 import {
