@@ -1,5 +1,8 @@
 import { DataSource } from "typeorm";
 import "dotenv/config";
+import { Users } from "./entities/user";
+import { Contact } from "./entities/contact";
+import { hash1680543119227 } from "../migrations/1680543119227-hash";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
@@ -9,6 +12,6 @@ export const AppDataSource = new DataSource({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
 
-  entities: [__dirname + "/entities/*.ts"],
-  migrations: [__dirname + "/migrations/*.ts"],
+  entities: [Users, Contact],
+  migrations: [hash1680543119227],
 });
