@@ -5,9 +5,11 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   OneToMany,
+  BeforeInsert,
 } from "typeorm";
 import { Exclude } from "class-transformer";
 import { Contact } from "./contact";
+import { getRounds, hashSync } from "bcryptjs";
 
 @Entity("users")
 export class Users {
@@ -15,7 +17,7 @@ export class Users {
   id: string;
 
   @Column()
-  fullName: string;
+  name: string;
 
   @Column({ unique: true })
   @Exclude()
@@ -36,4 +38,12 @@ export class Users {
 
   @OneToMany(() => Contact, (contact) => contact.user)
   contacts: Contact[];
+
+  @BeforeInsert()
+  hashPassword() {
+    const isEncrypted = getRounds(this.password);
+    if (!isEncrypted) {
+      this.password = hashSync(this.password, 10);
+    }
+  }
 }
