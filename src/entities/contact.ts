@@ -15,7 +15,7 @@ export class Contact {
   id: string;
 
   @Column()
-  fullName: string;
+  name: string;
 
   @Column()
   email: string;
