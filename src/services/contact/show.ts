@@ -1,6 +1,7 @@
+import { instanceToPlain } from "class-transformer";
 import { AppDataSource } from "../../data-source";
 import { Contact } from "../../entities/contact";
-import { iToken } from "../../interfaces/contact";
+import { iContactCreate, iToken } from "../../interfaces/contact";
 
 export const listmyContactsUserService = async ({ id }: iToken) => {
   const rep_contacts = AppDataSource.getRepository(Contact);
@@ -10,5 +11,6 @@ export const listmyContactsUserService = async ({ id }: iToken) => {
     relations: { user: true },
   });
 
-  return contacts;
+  const plainNewUser = instanceToPlain(contacts) as iContactCreate;
+  return plainNewUser;
 };
