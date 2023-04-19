@@ -42,8 +42,6 @@ MIT
 - jsonwebtoken: ^9.0.0
 - pg: ^8.10.0
 - reflect-metadata: ^0.1.13
-- swagger-jsdoc: ^6.2.8
-- swagger-ui-express: ^4.6.2
 - typeorm: ^0.3.12
 - uuid: ^9.0.0
 - yup: ^1.0.2
