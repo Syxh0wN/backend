@@ -1,26 +1,26 @@
 # Backend
 
-Backend é uma aplicação desenvolvida com o objetivo de fornecer uma API para acesso a dados e funcionalidades.
+Backend is an application developed with the objective of providing an API for data and functionality access.
 
-## Versão
+## Version
 
 1.0.0
 
-## Arquivo Principal
+## Main file
 
 index.js
 
-## Licença
+## License
 
 MIT
 
 ## Scripts
 
-- `dev`: inicia o servidor em modo desenvolvimento, utilizando o ts-node-dev e ignorando os arquivos na pasta node_modules.
-- `migration:generate`: gera uma nova migração baseada no arquivo data-source.ts.
-- `migration:run`: roda as migrações existentes baseadas no arquivo data-source.ts.
+- `dev`: Start the server in development mode, using ts-node-dev and ignoring the files in the node_modules folder.
+- `migration:generate`: Generate a new migration based on the data-source.ts file.
+- `migration:run`: Run the existing migrations based on the data-source.ts file.
 
-## Dependências de Desenvolvimento
+## Development Dependencies
 
 - @types/bcryptjs: ^2.4.2
 - @types/cors: ^2.8.13
@@ -31,7 +31,7 @@ MIT
 - ts-node-dev: ^2.0.0
 - typescript: ^5.0.2
 
-## Dependências
+## Dependencies
 
 - bcryptjs: ^2.4.3
 - class-transformer: ^0.5.1
