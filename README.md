@@ -165,6 +165,7 @@ Response:
 # Log In a User
 
 Method: `POST`
+
 URL: `/login`
 
 Description: This endpoint is used to log in a user.
@@ -190,6 +191,7 @@ This document describes the endpoints related to the contact management.
 ## Create a new contact
 
 Method: `POST`
+
 URL: `/contacts`
 
 Description: This endpoint is used to create a new contact.
@@ -219,6 +221,7 @@ Response:
 # Retrieve all contacts
 
 Method: `GET`
+
 URL: `/contacts`
 
 Description: This endpoint is used to retrieve all contacts.
@@ -236,6 +239,7 @@ Response:
 # Update a contact
 
 Method: `PATCH`
+
 URL: `/contacts/{id}`
 
 Description: This endpoint is used to update a contact.
@@ -266,6 +270,7 @@ Response:
 # Delete a contact
 
 Method: `DELETE`
+
 URL: `/contacts/{id}`
 
 Description: This endpoint is used to delete a contact.
